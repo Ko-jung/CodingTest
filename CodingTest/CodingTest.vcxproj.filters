@@ -45,5 +45,8 @@
     <ClCompile Include="2293_동전1.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="11053_가장긴증가하는부분수열.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

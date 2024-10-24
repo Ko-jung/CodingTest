@@ -48,5 +48,8 @@
     <ClCompile Include="11053_가장긴증가하는부분수열.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="2096_내려가기.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

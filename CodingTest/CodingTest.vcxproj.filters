@@ -28,6 +28,9 @@
     <Filter Include="소스 파일\BaekJoon\Other">
       <UniqueIdentifier>{35cd5265-dc03-41ff-8900-0cbbc3310ad0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\BruteForce">
+      <UniqueIdentifier>{d4be9d83-d87e-4bdc-ad11-956516b3cdff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -70,6 +73,9 @@
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
     <ClCompile Include="1007_벡터매칭.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="1011_FlymetotheAlphaCentauri.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>

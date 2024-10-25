@@ -66,5 +66,8 @@
     <ClCompile Include="10250_ACM호텔.cpp">
       <Filter>소스 파일\BaekJoon\Other</Filter>
     </ClCompile>
+    <ClCompile Include="1005_ACMCraft.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

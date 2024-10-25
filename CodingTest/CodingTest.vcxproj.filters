@@ -19,11 +19,17 @@
     <Filter Include="소스 파일\HackerRank">
       <UniqueIdentifier>{4a7f552c-9d6f-4540-b211-118df9453f3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\DP">
+      <UniqueIdentifier>{7ad682bf-2705-46f3-97c7-d154d00cd241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\DFS/BFS">
+      <UniqueIdentifier>{c03a6e69-7e99-4a1e-86fb-03aa0afdbc24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Other">
+      <UniqueIdentifier>{35cd5265-dc03-41ff-8900-0cbbc3310ad0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2839_설탕배달.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
     <ClCompile Include="FrogInMaze.cpp">
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
@@ -31,31 +37,34 @@
       <Filter>소스 파일\HackerRank</Filter>
     </ClCompile>
     <ClCompile Include="1463_1로만들기.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
-    <ClCompile Include="12865_평범한배낭.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
-    <ClCompile Include="9251_LCS.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
-    <ClCompile Include="10250_ACM호텔.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
-    <ClCompile Include="2293_동전1.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
-    <ClCompile Include="11053_가장긴증가하는부분수열.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
-    <ClCompile Include="2096_내려가기.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
     <ClCompile Include="1520_내리막길.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2096_내려가기.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2293_동전1.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2839_설탕배달.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="9251_LCS.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
     <ClCompile Include="10026_적록색약.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="11053_가장긴증가하는부분수열.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="12865_평범한배낭.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="10250_ACM호텔.cpp">
+      <Filter>소스 파일\BaekJoon\Other</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

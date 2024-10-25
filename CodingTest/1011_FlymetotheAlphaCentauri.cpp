@@ -20,9 +20,18 @@
 //
 //김우현을 위해 x지점부터 정확히 y지점으로 이동하는데 필요한 공간 이동 장치 작동 횟수의 최솟값을 구하는 프로그램을 작성하라.
 
+// 1 + 2 + 1 = 4
+// 1 + 2 + 3 + 2 + 1 =9
+// 1 + 2 + 3 + 4 + 3 + 2 + 1 = 16
+// 로 2승으로 논다
+// 목표보다 낮은 제곱수까지 간다음 부족한 부분을 적당히 넣으면 된다
+//
+// 1+2+3+2'+2'+1 = 11
+
+
+
 #include <iostream>
-#include <vector>
-#include <queue>
+#include <cmath>
 
 using namespace std;
 
@@ -40,44 +49,59 @@ int main()
 
 	for (int i = 0; i < T; i++)
 	{
-		pair<int, int> Pos;
-		cin >> Pos.first >> Pos.second;
+		long long x, y;
+		cin >> x >> y;
+		long max{ 0 }, move{ 0 };
 
-		// BFS를 위한 큐
-		queue< Position> BFS;
-		BFS.push({ Pos.first + 1, 1, 1});
-
-		// DP를 위한 vector
-		vector<int> DP(Pos.second + 1, -1);
-
-		int Ans;
-
-		while (!BFS.empty())
+		while (max * max <= y - x)
 		{
-			int NowPos = BFS.front().pos;
-			int PrevMove = BFS.front().prevmove;
-			int Count = BFS.front().count;
-			BFS.pop();
-
-			if (DP[NowPos] == -1)
-			{
-				DP[NowPos] = Count;
-
-				if (PrevMove <= 0) continue;
-				if (NowPos == Pos.second - 1) { Ans = Count; break; }
-
-				for (int i = -1; i <= 1; i++)
-				{
-					if(NowPos + PrevMove + i <= Pos.second && DP[NowPos + PrevMove + i] == -1)
-						BFS.push({ NowPos + PrevMove + i, PrevMove + i, Count + 1 });
-				}
-			}
-			else
-			{
-				DP[NowPos] = min(DP[NowPos], Count);
-			}
+			++max;
 		}
+		--max;
 
-		cout << Ans + 1 << endl;
+		move = max * 2 - 1;
+
+		long long LastNum = y - x - max * max;
+		LastNum = ceil((double)LastNum / max);
+		move += LastNum;
+		cout << move << endl;;
+
+		// pair<int, int> Pos;
+		// cin >> Pos.first >> Pos.second;
+		// 
+		// int Ans;
+		// // BFS를 위한 큐
+		// queue< Position> BFS;
+		// BFS.push({ Pos.first + 1, 1, 1 });
+		// 
+		// // DP를 위한 vector
+		// vector<int> DP(Pos.second + 1, -1);
+		// while (!BFS.empty())
+		// {
+		// 	int NowPos = BFS.front().pos;
+		// 	int PrevMove = BFS.front().prevmove;
+		// 	int Count = BFS.front().count;
+		// 	BFS.pop();
+		// 
+		// 	if (DP[NowPos] == -1)
+		// 	{
+		// 		DP[NowPos] = Count;
+		// 
+		// 		if (PrevMove <= 0) continue;
+		// 		if (NowPos == Pos.second - 1) { Ans = Count; break; }
+		// 
+		// 		for (int i = -1; i <= 1; i++)
+		// 		{
+		// 			if(NowPos + PrevMove + i <= Pos.second && DP[NowPos + PrevMove + i] == -1)
+		// 				BFS.push({ NowPos + PrevMove + i, PrevMove + i, Count + 1 });
+		// 		}
+		// 	}
+		// 	else
+		// 	{
+		// 		DP[NowPos] = min(DP[NowPos], Count);
+		// 	}
+		// }
+		// 
+		// cout << Ans + 1 << endl;
 	}
 }

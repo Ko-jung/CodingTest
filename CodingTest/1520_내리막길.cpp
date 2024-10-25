@@ -22,11 +22,12 @@ using namespace std;
 int Height, Width;
 vector<vector<int>> Map;
 vector<vector<int>> DP;
+vector<vector<bool>> Visisted;
 vector<pair<int, int>> Direction{
-	{1,0},
-	{0,1},
+	{1 ,0},
+	{0 ,1},
 	{-1,0},
-	{0,-1}
+	{0 ,-1}
 };
 
 void DFS(int x, int y)
@@ -38,8 +39,31 @@ void DFS(int x, int y)
 		int NewY = y + d.second;
 
 		if (NewX < 0 || NewX >= Width || NewY < 0 || NewY >= Height || Map[y][x] <= Map[NewY][NewX]) continue;
+
+
 		DFS(NewX, NewY);
 	}
+}
+
+int Recursion(int x, int y)
+{
+	if (x == Width - 1 && y == Height - 1)		return 1;
+
+	if (DP[y][x] == -1)
+	{
+		DP[y][x] = 0;
+		for (const auto& d : Direction)
+		{
+			int NewX = x + d.first;
+			int NewY = y + d.second;
+
+			if (NewX < 0 || NewX >= Width || NewY < 0 || NewY >= Height || Map[y][x] <= Map[NewY][NewX]) continue;
+
+			DP[y][x] += Recursion(NewX, NewY);
+		}
+	}
+
+	return DP[y][x];
 }
 
 int main()
@@ -58,10 +82,11 @@ int main()
 		}
 	}
 
-	DP.assign(y, vector<int>(x, 0));
+	Visisted.assign(y, vector<bool>(x, false));
+	//DP.assign(y, vector<int>(x, 0));
 	//DP[0][0] = 1;
+	//DFS(0, 0);
 
-	DFS(0, 0);
-
-	cout << DP[y - 1][x - 1];
+	DP.assign(y, vector<int>(x, -1));
+	cout << Recursion(0, 0);
 }

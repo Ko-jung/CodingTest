@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <numeric>
+#include <algorithm>
 
 using namespace std;
 
@@ -13,32 +14,52 @@ int main()
 	long long min, max;
 	cin >> min >> max;
 
-	vector<int> Check(max - min + 1);
+	vector<long long> Check(max - min + 1);
 	iota(Check.begin(), Check.end(), min);
 
-	int Pow{ 0 };
+	long long Pow{ 0 };
 	while (Pow * Pow <= min) ++Pow;
 	--Pow;
 
-	for (int i = Pow; i * i <= max; i++)
+	for (long long i = 1; i * i <= max; i++)
 	{
 		if (i == 1) continue;
+		if (find(Check.begin(), Check.end(), i * i) == Check.end()) continue;
 
-		vector<int> Remove;
-		Remove.reserve(Check.size() / 2);
-		for (int j = 0; j < Check.size(); j++)
+		auto Index = find(Check.begin(), Check.end(), i * i);
+		for (long long j = distance(Check.begin(), Index); j <= (max - min); j += (i * i))
 		{
-			if (Check[j] % (i * i) == 0) Remove.push_back(j);
+			//cout << Check[j] << " ";
+			Check[j] = -1;
 		}
+		cout << endl;
+		//for (auto it = find(Check.begin(), Check.end(), i * i); *it != -1; it += i * i)
+		//{
+		//	*it = -1;
+		//}
 
-		int RemoveCount{ 0 };
-		for (const auto& r : Remove)
-		{
-			Check.erase(Check.begin() + (r - RemoveCount));
-			RemoveCount++;
-		}
+
+		// vector<long long> Remove;
+		// Remove.reserve(Check.size() / 2);
+		// for (long long j = 0; j < Check.size(); j++)
+		// {
+		// 	if (Check[j] == -1) continue;
+		// 
+		// 	if (Check[j] % (i * i) == 0)
+		// 	{
+		// 		Check[j] = -1;
+		// 	}
+		// }
+
+		//long long RemoveCount{ 0 };
+		//for (const auto& r : Remove)
+		//{
+		//	Check.erase(Check.begin() + (r - RemoveCount));
+		//	RemoveCount++;
+		//}
 	}
-
-	// 맨 앞 0 제외
-	cout << Check.size();
+		
+	cout << count_if(Check.begin(), Check.end(), [](long long x) {
+		return x != -1;
+		});
 }

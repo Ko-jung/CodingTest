@@ -82,6 +82,9 @@
       <Filter>소스 파일\BaekJoon\Math</Filter>
     </ClCompile>
     <ClCompile Include="1016_제곱NONO수.cpp">
+      <Filter>소스 파일\BaekJoon\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="1002_터렛.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>

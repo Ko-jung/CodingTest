@@ -85,6 +85,9 @@
       <Filter>소스 파일\BaekJoon\Math</Filter>
     </ClCompile>
     <ClCompile Include="1002_터렛.cpp">
+      <Filter>소스 파일\BaekJoon\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="310001_주식시뮬레이션.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,50 +2,47 @@
 
 #include <iostream>
 #include <vector>
+#include <map>
 #include <algorithm>
 
 using namespace std;
-vector<pair<int, int>> Nodes;
+vector<int> Nodes[1001];
 vector<int> Visited;
 int N, M;
 
 void DFS(int Node, int Count)
 {
-	Visited[Node - 1] = Count;
+	Visited[Node] = Count;
 
-	for (int i = 0; i < Nodes.size(); i++)
+	for (int i = 0; i < Nodes[Node].size(); i++)
 	{
-		if (Nodes[i].first == Node)
+		if (Visited[Nodes[Node][i]] == 0)
 		{
-			if (Visited[Nodes[i].second - 1] == 0)
-			{
-				DFS(Nodes[i].second, Count);
-			}
+			DFS(Nodes[Node][i], Count);
 		}
-	}
-	
+	}	
 }
 
 int main()
 {
 	cin >> N >> M;
 		
-	Visited.assign(N, false);
+	Visited.assign(N + 1, false);
 	int Count{ 0 };
 	
 	for (int i = 0; i < M; i++)
 	{
 		int a, b;
 		cin >> a >> b;
-		Nodes.emplace_back(pair<int, int>{a, b});
-		Nodes.emplace_back(pair<int, int>{b, a});
+		Nodes[a].emplace_back(b);
+		Nodes[b].emplace_back(a);
 	}
 
-	for (const auto& n : Nodes)
+	for (int i = 1; i <= N; i++)
 	{
-		if (Visited[n.first - 1] == false)
+		if (Visited[i] == false)
 		{
-			DFS(n.first, ++Count);
+			DFS(i, ++Count);
 		}
 	}
 

@@ -31,9 +31,7 @@
 // 유틸을 도와주도록 하자!
 
 
-
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 

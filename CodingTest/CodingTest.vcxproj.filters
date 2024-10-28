@@ -34,6 +34,12 @@
     <Filter Include="소스 파일\BaekJoon\Math">
       <UniqueIdentifier>{07d4377f-bd88-424d-bf19-eed816cdae7c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\NonSolve">
+      <UniqueIdentifier>{556eb832-f50e-4727-ac6a-141479339bfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BaekJoon\Dijkstra">
+      <UniqueIdentifier>{94f01642-89e6-4a06-9ebd-7e2fb727a8f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -75,9 +81,6 @@
     <ClCompile Include="1005_ACMCraft.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
-    <ClCompile Include="1007_벡터매칭.cpp">
-      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
-    </ClCompile>
     <ClCompile Include="1011_FlymetotheAlphaCentauri.cpp">
       <Filter>소스 파일\BaekJoon\Math</Filter>
     </ClCompile>
@@ -87,8 +90,41 @@
     <ClCompile Include="1002_터렛.cpp">
       <Filter>소스 파일\BaekJoon\Math</Filter>
     </ClCompile>
-    <ClCompile Include="310001_주식시뮬레이션.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+    <ClCompile Include="31001_주식시뮬레이션.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="1007_벡터매칭.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="31287_장난감강아지.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="4929_수열걷기.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="1041_주사위.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="1092_배.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="25307_시루의백화점구경.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="1027_고층건물.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="1753_최단경로.cpp">
+      <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
+    </ClCompile>
+    <ClCompile Include="넥슨1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="넥슨3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="넥슨2.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

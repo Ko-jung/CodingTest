@@ -506,3 +506,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unrealengine,c++
+CodingTest/넥슨1.cpp
+CodingTest/넥슨2.cpp
+CodingTest/넥슨3.cpp

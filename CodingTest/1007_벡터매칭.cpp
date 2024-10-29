@@ -6,7 +6,6 @@
 //
 //평면 상의 점이 주어졌을 때, 집합 P의 벡터 매칭에 있는 벡터의 합의 길이의 최솟값을 출력하는 프로그램을 작성하시오.
 
-
 #include <iostream>
 #include <vector>
 #include <algorithm>

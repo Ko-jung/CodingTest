@@ -43,6 +43,9 @@
     <Filter Include="소스 파일\BaekJoon\Graph">
       <UniqueIdentifier>{1bc9dbb2-4851-46a1-ad9c-639be4e470b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\Search">
+      <UniqueIdentifier>{104d7a70-39fa-4218-a12c-a4d5fa585286}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -120,20 +123,20 @@
     <ClCompile Include="1753_최단경로.cpp">
       <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
     </ClCompile>
-    <ClCompile Include="넥슨1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="넥슨3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="넥슨2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="11724_연결요소의개수.cpp">
       <Filter>소스 파일\BaekJoon\Graph</Filter>
     </ClCompile>
     <ClCompile Include="10451_순열사이클.cpp">
       <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="넥슨1.cpp">
+      <Filter>소스 파일\BaekJoon\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="넥슨2.cpp">
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="넥슨3.cpp">
+      <Filter>소스 파일\BaekJoon\Other</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

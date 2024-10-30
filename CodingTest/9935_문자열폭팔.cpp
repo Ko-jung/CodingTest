@@ -12,6 +12,8 @@
 
 #include <iostream>
 #include <string>
+#include <stack>
+#include <algorithm>
 
 using namespace std;
 
@@ -22,14 +24,46 @@ int main()
 
 	cin >> str >> token;
 
-	while (true)
+	stack<char> Strings;
+	for (const auto& s : str)
 	{
-		int FindIndex = str.find(token, 0);
-		if (FindIndex == -1) { break; }
+		Strings.push(s);
 
-		str.erase(FindIndex, token.size());
+		if (s == *token.rbegin())
+		{
+			if (Strings.empty()) continue;
+			if (Strings.size() < token.size()) { continue; }
+
+			string TempStr;
+			for (int i = 0; i < token.size(); i++)
+			{
+				TempStr += Strings.top();
+				Strings.pop();
+			}
+
+			reverse(TempStr.begin(), TempStr.end());
+			if (TempStr != token)
+			{
+				for (const auto& tstr : TempStr)
+					Strings.push(tstr);
+			}
+		}
+	}
+	
+	string Answer;
+	while (!Strings.empty())
+	{
+		Answer += Strings.top();
+		Strings.pop();
 	}
 
-	
-	cout << (str.empty() ? (string)"ERULA" : str);
+	if (Answer.empty())
+	{
+		cout << "FRULA";
+	}
+	else
+	{
+		reverse(Answer.begin(), Answer.end());
+		cout << Answer;
+	}
 }

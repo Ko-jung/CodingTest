@@ -46,6 +46,9 @@
     <Filter Include="소스 파일\BaekJoon\Search">
       <UniqueIdentifier>{104d7a70-39fa-4218-a12c-a4d5fa585286}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\String">
+      <UniqueIdentifier>{11263d19-5bc7-41e7-9d35-c72ae1cb34ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -105,9 +108,6 @@
     <ClCompile Include="31287_장난감강아지.cpp">
       <Filter>소스 파일\BaekJoon\NonSolve</Filter>
     </ClCompile>
-    <ClCompile Include="4929_수열걷기.cpp">
-      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
-    </ClCompile>
     <ClCompile Include="1041_주사위.cpp">
       <Filter>소스 파일\BaekJoon\NonSolve</Filter>
     </ClCompile>
@@ -137,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="넥슨3.cpp">
       <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="11478_서로다른부분문자열의개수.cpp">
+      <Filter>소스 파일\BaekJoon\String</Filter>
+    </ClCompile>
+    <ClCompile Include="4929_수열걷기.cpp">
+      <Filter>소스 파일\BaekJoon\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

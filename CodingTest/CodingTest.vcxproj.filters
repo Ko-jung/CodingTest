@@ -144,5 +144,8 @@
     <ClCompile Include="4929_수열걷기.cpp">
       <Filter>소스 파일\BaekJoon\Math</Filter>
     </ClCompile>
+    <ClCompile Include="9935_문자열폭팔.cpp">
+      <Filter>소스 파일\BaekJoon\String</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

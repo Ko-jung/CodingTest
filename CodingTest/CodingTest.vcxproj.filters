@@ -151,6 +151,9 @@
       <Filter>소스 파일\BaekJoon\BruteForce</Filter>
     </ClCompile>
     <ClCompile Include="9095_1,2,3더하기.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="2231_분해합.cpp">
       <Filter>소스 파일\BaekJoon\BruteForce</Filter>
     </ClCompile>
   </ItemGroup>

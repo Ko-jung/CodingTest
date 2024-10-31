@@ -150,5 +150,8 @@
     <ClCompile Include="2503_숫자야구.cpp">
       <Filter>소스 파일\BaekJoon\BruteForce</Filter>
     </ClCompile>
+    <ClCompile Include="9095_1,2,3더하기.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

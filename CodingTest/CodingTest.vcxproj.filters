@@ -156,5 +156,8 @@
     <ClCompile Include="2231_분해합.cpp">
       <Filter>소스 파일\BaekJoon\BruteForce</Filter>
     </ClCompile>
+    <ClCompile Include="10448_유레카이론.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

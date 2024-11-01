@@ -174,5 +174,8 @@
     <ClCompile Include="퍼즐게임챌린지.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
+    <ClCompile Include="충돌위험찾기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

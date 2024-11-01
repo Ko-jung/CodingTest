@@ -52,6 +52,9 @@
     <Filter Include="소스 파일\Programmers">
       <UniqueIdentifier>{2ed858db-3e89-4202-b228-e369ff77a04a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Programmers\NonSolve">
+      <UniqueIdentifier>{26fc7137-c009-4627-aae3-23fa31ff4ae9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -175,6 +178,9 @@
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
     <ClCompile Include="충돌위험찾기.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="수식복원하기.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>

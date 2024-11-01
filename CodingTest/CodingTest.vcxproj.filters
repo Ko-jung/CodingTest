@@ -181,6 +181,12 @@
       <Filter>소스 파일\Programmers\NonSolve</Filter>
     </ClCompile>
     <ClCompile Include="수식복원하기.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="도넛과막대그래프.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="석유시추.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>

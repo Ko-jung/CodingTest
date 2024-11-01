@@ -49,6 +49,9 @@
     <Filter Include="소스 파일\BaekJoon\String">
       <UniqueIdentifier>{11263d19-5bc7-41e7-9d35-c72ae1cb34ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Programmers">
+      <UniqueIdentifier>{2ed858db-3e89-4202-b228-e369ff77a04a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -166,7 +169,10 @@
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
     <ClCompile Include="1012_유기농배추.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="퍼즐게임챌린지.cpp">
+      <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

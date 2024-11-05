@@ -117,9 +117,6 @@
     <ClCompile Include="1041_주사위.cpp">
       <Filter>소스 파일\BaekJoon\NonSolve</Filter>
     </ClCompile>
-    <ClCompile Include="1092_배.cpp">
-      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
-    </ClCompile>
     <ClCompile Include="25307_시루의백화점구경.cpp">
       <Filter>소스 파일\BaekJoon\NonSolve</Filter>
     </ClCompile>
@@ -188,6 +185,9 @@
     </ClCompile>
     <ClCompile Include="석유시추.cpp">
       <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="1092_배.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

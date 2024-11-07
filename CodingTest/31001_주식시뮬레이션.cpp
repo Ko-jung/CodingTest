@@ -32,10 +32,149 @@
 
 
 #include <iostream>
+#include <map>
+#include <string>
 
 using namespace std;
 
+map<string, int> Inventory;
+void AddInventory(string s, int c)
+{
+	if (Inventory.find(s) == Inventory.end())
+	{
+		Inventory.insert({ s, c });
+	}
+	else
+	{
+		Inventory[s] += c;
+	}
+}
+int FindInventory(string s)
+{
+	if (Inventory.find(s) == Inventory.end())
+	{
+		return 0;
+	}
+	else
+	{
+		return Inventory[s];
+	}
+}
+
 int main()
 {
+	int N,Q;
+	long long M;
+	cin >> N >> M >> Q;
 
+	multimap<int, string> GroupMap;
+	map<string, int> StockMap;
+	for (int i = 0; i < N; i++)
+	{
+		int Group;
+		string Name;
+		int Stock;
+		cin >> Group >> Name >> Stock;
+
+		GroupMap.insert({ Group,Name });
+		StockMap.insert({ Name,Stock });
+	}
+
+	for (int i = 0; i < Q; i++)
+	{
+		int Menu;
+		cin >> Menu;
+
+		switch (Menu)
+		{
+		case 1:
+		{
+			string A;
+			int B;
+			cin >> A >> B;
+
+			if (M >= StockMap[A] * B)
+			{
+				AddInventory(A, B);
+				M -= (StockMap[A] * B);
+			}
+			break;
+		}
+		case 2: 
+		{
+			string A;
+			int B;
+			cin >> A >> B;
+
+			int StockCount = FindInventory(A);
+			if (StockCount >= B)
+			{
+				Inventory[A] -= B;
+				M += (StockMap[A] * B);
+			}
+			else
+			{
+				M += (StockMap[A] * StockCount);
+				Inventory.erase(A);
+			}
+			break;
+		}
+		case 3: 
+		{
+			string A;
+			int C;
+			cin >> A >> C;
+
+			StockMap[A] += C;
+			break;
+		}
+		case 4:
+		{
+			int D;
+			int C;
+			cin >> D >> C;
+
+			for (auto it = GroupMap.lower_bound(D); it != GroupMap.upper_bound(D); it++)
+			{
+				string Name = (*it).second;
+
+				StockMap[Name] += C;
+			}
+			break;
+		}
+		case 5: 
+		{
+			int D;
+			int E;
+			cin >> D >> E;
+
+			double Percent = (double)E / 100;
+			for (auto it = GroupMap.lower_bound(D); it != GroupMap.upper_bound(D); it++)
+			{
+				string Name = (*it).second;
+				double NewValue = (double)StockMap[Name] + ((double)StockMap[Name] * Percent);
+
+				StockMap[Name] = (int)(NewValue / 10) * 10;
+			}
+			break;
+		}
+		case 6: 
+		{
+			cout << M << endl;
+			break;
+		}
+		case 7: 
+		{
+			long long TempMoney = M;
+			for (const auto& inv : Inventory)
+			{
+				TempMoney += StockMap[inv.first] * inv.second;
+			}
+			cout << TempMoney << endl;
+			break;
+		}
+		default:
+			break;
+		}
+	}
 }

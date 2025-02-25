@@ -189,5 +189,8 @@
     <ClCompile Include="25307_시루의백화점구경.cpp">
       <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
     </ClCompile>
+    <ClCompile Include="15560_구간합최대1.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,6 +4,8 @@
 	Q개의 쿼리가 주어지며, 그 종류는 두 가지가 있다.
 		1. A, B가 주어지면, max(U × (Ki + Ki + 1 + ... + Kj) + V × (j - i)) (A ≤ i ≤ j ≤ B) 의 값을 구한다.
 		2. A, B가 주어지면, KA의 값을 B으로 바꾼다.
+
+	https://www.notion.so/1a5a80bf7dba80df90d8e4ceef15bffb?pvs=4 참고하기
 */
 
 #include <iostream>
@@ -38,8 +40,10 @@ int main()
 
 			if (Sum > Max)
 			{
-
+				Max = Sum;
+				
 			}
+
 		}
 		do
 		{

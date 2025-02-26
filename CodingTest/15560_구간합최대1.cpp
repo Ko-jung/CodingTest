@@ -13,6 +13,15 @@
 #include <vector>
 #include <numeric>
 
+void Print(std::vector<int>& SegmentTree)
+{
+	for (int i = 0; i < SegmentTree.size(); i++)
+	{
+		std::cout << SegmentTree[i] << " ";
+	}
+	std::cout << '\n';
+}
+
 int main()
 {
 	int N, Q, U, V;
@@ -26,34 +35,109 @@ int main()
 		K.push_back(temp);
 	}
 
-	int C, A, B;
-	std::cin >> C >> A >> B;
-
-	if (C == 0)
+	for (int Query = 0; Query < Q; Query++)
 	{
-		// 1번 쿼리
-		int Max{ 0 };
-		int i = A, j = B;
-		while (true)
-		{
-			int Sum = U * std::accumulate(K.begin() + i, K.end() - j, 0) + V * (j - i);
+		int C, A, B;
+		std::cin >> C >> A >> B;
 
-			if (Sum > Max)
+		//트리 생성
+		std::vector<int> SegmentTree;
+		{
+			// 트리 크기
+			int Pow = 1;
+			while (Pow < N)
 			{
-				Max = Sum;
-				
+				Pow *= 2;
+			}
+			SegmentTree.assign(Pow * 2, 0);
+
+			// 샘플 데이터 트리의 중간부터 저장
+			for (int i = 0; i < N; i++)
+			{
+				SegmentTree[SegmentTree.size() / 2 + i] = K[i];
 			}
 
+			// 부모 노드 채우기
+			for (int i = SegmentTree.size() - 1; i >= 0; i--)
+			{
+				SegmentTree[i / 2] += SegmentTree[i];
+			}
+
+			//Print(SegmentTree);
 		}
-		do
+
+		if (C == 0)
 		{
+			//Print(SegmentTree);
+			
+			// 1번 쿼리
+			int Max{ 0 };
+			for (int Right = B - 1; Right >= 0; --Right)
+			{
+				for (int Left = A - 1; Left < Right; Left++)
+				{
+					int S = Left;
+					int E = Right;
+					// 구간 합
+					int SegSum = 0;
+
+					std::vector<int> NodeNum;
+					int Start = S + SegmentTree.size() / 2;
+					int End = E + SegmentTree.size() / 2;
+					while (true)
+					{
+						// 부모 노드로 이동
+						int NextStart = (Start + 1) / 2;
+						int NextEnd = (End - 1) / 2;
+
+						if (NextStart >= NextEnd)
+						{
+							NodeNum.push_back(Start);
+							NodeNum.push_back(End);
+							break;
+						}
+						else
+						{
+							if (Start % 2 == 1) NodeNum.push_back(Start);	// 노드 선택
+							if (End % 2 == 0) NodeNum.push_back(End);		// 노드 선택
 
 
-		} while (true);
-	}
-	else
-	{
-		// 2번 쿼리
-		K[A] = B;
+							Start = NextStart;
+							End = NextEnd;
+						}
+					}
+					for (auto& p : NodeNum)
+					{
+						SegSum += SegmentTree[p];
+					}
+
+					int Sum = U * SegSum + V * (E - S);
+
+					//std::cout << "Done! S: " << S << ", E: " << E << ", Sum: " << Sum << std::endl;
+
+					if (Sum > Max)
+						Max = Sum;
+					else
+						break;
+				}
+			}
+			std::cout << Max << std::endl;
+		}
+		else
+		{
+			// 2번 쿼리
+			--A;
+			int Diff = B - K[A];
+			K[A] = B;
+			int index = A + SegmentTree.size() / 2;
+
+			while (index != 0)
+			{
+				SegmentTree[index] += Diff;
+				index /= 2;
+			}
+
+			//Print(SegmentTree);
+		}
 	}
 }

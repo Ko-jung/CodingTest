@@ -31,8 +31,63 @@ int main()
 	}
 
 	int Count = 0;
+	int NowIndex = 0;
 	while (true)
 	{
+		for (const auto& target : Target)
+		{
+			// 한 쪽 방향으로 탐색
+			// 나온 값이 반 보다 크다면 반대에서 출발해야하므로 반을 빼야한다
+			int Index = std::distance(Arr.begin(), std::find(Arr.begin(), Arr.end(), target));
 
+			// |||큐현재인덱스||||타겟인덱스||||
+			if (Index > NowIndex)
+			{
+				int TempCount = 0;
+				for (int i = 0; i < Arr.size()/2; i++)
+				{
+					if (!Arr[i + NowIndex]) continue;
+					if (Arr[i + NowIndex] == target)
+					{
+						TempCount = i;
+					}
+				}
+
+				if (TempCount)
+				{
+					// find
+					Count += TempCount;
+				}
+				else
+				{
+					// cant find
+				}
+			}
+			// |||타겟인덱스||||큐현재인덱스||||
+			else
+			{
+
+			}
+
+			if (abs(Index - NowIndex) <= Arr.size() / 2)
+			{
+				Count += (abs(Index - NowIndex));
+			}
+			else
+			{
+				if (Index > NowIndex)
+				{
+					int LeftCount = NowIndex;
+					int RightCount = Arr.size() - Index - 1;
+					Count += ();
+				}
+				else
+				{
+
+				}
+			}
+
+			NowIndex = Index;
+		}
 	}
 }

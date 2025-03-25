@@ -11,14 +11,16 @@
 
 #include <iostream>
 #include <vector>
+#include <deque>
 #include <numeric>
+#include <algorithm>
 
 int main()
 {
 	int M, N;
 	std::cin >> N >> M;
 
-	std::vector<int> Arr(N);
+	std::deque<int> Arr(N);
 	std::iota(Arr.begin(), Arr.end(), 1);
 
 	std::vector<int> Target;
@@ -31,63 +33,39 @@ int main()
 	}
 
 	int Count = 0;
-	int NowIndex = 0;
-	while (true)
+
+	for (const auto& target : Target)
 	{
-		for (const auto& target : Target)
+		//if (Arr.front() == target || Arr.back() == target)
+		//{
+		//	Arr.front() == target ? Arr.pop_front() : Arr.pop_back();
+		//	continue;
+		//}
+		int TargetIndex = std::distance(Arr.begin(), std::find(Arr.begin(), Arr.end(), target));
+
+		if (TargetIndex > (Arr.size() / 2))
 		{
-			// 한 쪽 방향으로 탐색
-			// 나온 값이 반 보다 크다면 반대에서 출발해야하므로 반을 빼야한다
-			int Index = std::distance(Arr.begin(), std::find(Arr.begin(), Arr.end(), target));
-
-			// |||큐현재인덱스||||타겟인덱스||||
-			if (Index > NowIndex)
+			while (Arr.front() != target)
 			{
-				int TempCount = 0;
-				for (int i = 0; i < Arr.size()/2; i++)
-				{
-					if (!Arr[i + NowIndex]) continue;
-					if (Arr[i + NowIndex] == target)
-					{
-						TempCount = i;
-					}
-				}
-
-				if (TempCount)
-				{
-					// find
-					Count += TempCount;
-				}
-				else
-				{
-					// cant find
-				}
+				int Back = Arr.back();
+				Arr.pop_back();
+				Arr.push_front(Back);
+				Count++;
 			}
-			// |||타겟인덱스||||큐현재인덱스||||
-			else
+			Arr.pop_front();
+		}
+		else
+		{
+			while (Arr.front() != target)
 			{
-
+				int Front = Arr.front();
+				Arr.pop_front();
+				Arr.push_back(Front);
+				Count++;
 			}
-
-			if (abs(Index - NowIndex) <= Arr.size() / 2)
-			{
-				Count += (abs(Index - NowIndex));
-			}
-			else
-			{
-				if (Index > NowIndex)
-				{
-					int LeftCount = NowIndex;
-					int RightCount = Arr.size() - Index - 1;
-					Count += ();
-				}
-				else
-				{
-
-				}
-			}
-
-			NowIndex = Index;
+			Arr.pop_front();
 		}
 	}
+
+	std::cout << Count << std::endl;
 }

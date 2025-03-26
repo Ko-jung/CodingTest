@@ -55,6 +55,9 @@
     <Filter Include="소스 파일\Programmers\NonSolve">
       <UniqueIdentifier>{26fc7137-c009-4627-aae3-23fa31ff4ae9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\DataStructure">
+      <UniqueIdentifier>{80fd60d0-794d-4f65-9862-9683d02b2c5e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -195,10 +198,13 @@
     <ClCompile Include="1013_Contact.cpp">
       <Filter>소스 파일\BaekJoon\String</Filter>
     </ClCompile>
-    <ClCompile Include="1021_회전하는큐.cpp">
-      <Filter>소스 파일\BaekJoon\Other</Filter>
-    </ClCompile>
     <ClCompile Include="1026_보물.cpp">
+      <Filter>소스 파일\BaekJoon\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="1021_회전하는큐.cpp">
+      <Filter>소스 파일\BaekJoon\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="1022_소용돌이예쁘게출력하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

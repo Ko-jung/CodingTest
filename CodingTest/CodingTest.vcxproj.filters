@@ -196,6 +196,9 @@
       <Filter>소스 파일\BaekJoon\String</Filter>
     </ClCompile>
     <ClCompile Include="1021_회전하는큐.cpp">
+      <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="1026_보물.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

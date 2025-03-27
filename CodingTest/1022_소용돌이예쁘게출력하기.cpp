@@ -30,6 +30,9 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
+#include <string>
+#include <algorithm>
 
 int main()
 {
@@ -46,24 +49,73 @@ int main()
 	{
 		for (int i = 0; i < Wight; i++)
 		{
-			int x = r1 + i;
-			int y = c1 + j;
+			int x = c1 + i;
+			int y = r1 + j;
+
+			if (x >= 0 && y >= 0 && x == y)
+			{
+				int Temp = (x + 1) * 2 - 1;
+				Board[j][i] = Temp * Temp;
+				continue;
+			}
 
 			// 0,0 기준 우하대각선 방향으로 1, 9, 25, 49 값이 나오므로 이 숫자를 기준으로 쓴다.
-			int Standard = (abs(x) > abs(y) ? abs(x) * 2 + 1 : abs(y) * 2 + 1) + 1;
+			int Standard = (abs(x) > abs(y) ? (abs(x) ) * 2 - 1 : (abs(y) ) * 2 - 1);
+			Standard *= Standard;
+			Standard += 1;
 
-			if (x - y <= 0)
+			if (x - y >= 0)
 			{
 				// ㄱ자로 이동
 				int S = abs(x) > abs(y) ? abs(x) : abs(y);
 				int MoveY = S - 1 - y;
 				int MoveX = S - 1 - x;
-				Board[j][i] = Standard + MoveX + MoveY;
+				Board[j][i] = Standard + MoveX + MoveY + 1;
 			}
 			else
 			{
-				// ㄱ자와 ㄴ자로 이동
+				// ㄱ자 이동
+				int S = abs(x) > abs(y) ? abs(x) : abs(y);
+				int MoveY = S - 1 + S;
+				int MoveX = S - 1 + S;
+
+				// ㄴ자 이동
+				MoveY += (y - (-S));
+				MoveX += (x - (-S));
+				Board[j][i] = Standard + MoveX + MoveY + 1;
 			}
+
+			//std::cout << Board[j][i] << " ";
 		}
+		//std::cout << std::endl;
+	}
+
+	std::vector<int> MaxElements;
+	for (const auto& board : Board)
+	{
+		auto Max = std::max_element(board.begin(), board.end());
+		MaxElements.emplace_back(*Max);
+	}
+	int Max = *std::max_element(MaxElements.begin(), MaxElements.end());
+	int Digits = log10(Max) + 1;
+	//std::cout << Digits << std::endl;
+
+	for (const auto& board : Board)
+	{
+		for (const auto& b : board)
+		{
+			int BDigit = log10(b) + 1;
+
+			std::string Text;
+			// 앞에 공백
+			for (int i = 0; i < Digits - BDigit; i++)
+			{
+				Text += " ";
+			}
+			Text += std::to_string(b);
+
+			std::cout << Text << " ";
+		}
+		std::cout << std::endl;
 	}
 }

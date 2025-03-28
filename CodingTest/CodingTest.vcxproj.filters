@@ -204,11 +204,14 @@
     <ClCompile Include="1021_회전하는큐.cpp">
       <Filter>소스 파일\BaekJoon\DataStructure</Filter>
     </ClCompile>
-    <ClCompile Include="1049_기타줄.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1022_소용돌이예쁘게출력하기.cpp">
       <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="1049_기타줄.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="1051_숫자정사각형.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

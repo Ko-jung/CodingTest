@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <queue>
 
 int main()
 {
@@ -28,4 +29,24 @@ int main()
 		Board.emplace_back(Line);
 	}
 
+	int Answer = 0;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			for (int k = std::min(N - 1 - i, M - 1 - j); k > Answer; k--)
+			{
+				if (Board[i][j] == Board[i + k][j] &&
+					Board[i][j] == Board[i][j + k] &&
+					Board[i][j] == Board[i + k][j + k])
+				{
+					Answer = k;
+					break;
+				}
+			}
+		}
+	}
+
+	Answer++;
+	std::cout << (Answer * Answer) << std::endl;
 }

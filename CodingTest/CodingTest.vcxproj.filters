@@ -211,7 +211,10 @@
       <Filter>소스 파일\BaekJoon\BruteForce</Filter>
     </ClCompile>
     <ClCompile Include="1051_숫자정사각형.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="1029_그림교환.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

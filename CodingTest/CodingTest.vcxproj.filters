@@ -213,8 +213,11 @@
     <ClCompile Include="1051_숫자정사각형.cpp">
       <Filter>소스 파일\BaekJoon\Other</Filter>
     </ClCompile>
-    <ClCompile Include="1029_그림교환.cpp">
+    <ClCompile Include="1030_프렉탈평면.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="1029_그림교환.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

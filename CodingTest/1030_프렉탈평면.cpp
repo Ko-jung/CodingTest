@@ -13,16 +13,15 @@
 
 int S, N, K;
 
-bool Recall(const int& x, const int& y, const int& Depth)//, const bool& Answer)
+bool Recall(const int& len, const int& x, const int& y)//, const bool& Answer)
 {
-	if (Depth == 0) return false;
-	int Interval = (N - K) / 2;
-	if ((x / N) * N + Interval <= x && x < (x / N) * N + (N - Interval)
-		&& (y / N) * N + Interval <= y && y < (y / N) * N + (N - Interval))
-	{
-		return true;
+	if (len == 1) return 0;
+	int border = len / N;
+	if (x >= border * (N - K) / 2 && x < border * (N + K) / 2
+		&& y >= border * (N - K) / 2 && y < border * (N + K) / 2) {
+		return 1;
 	}
-	return Recall(x / N, y / N, Depth - 1);
+	return Recall(border, x % border, y % border);
 
 	//if (Depth == S)
 	//{
@@ -66,7 +65,8 @@ int main()
 	{
 		for (int i = C1; i <= C2; i++)
 		{
-			std::cout << Recall(i, j, S) << " ";
+			//std::cout << Recall(i, j, S) << " ";
+			std::cout << Recall(std::pow(N,S), j, i);
 		}
 		std::cout << std::endl;
 	}

@@ -219,11 +219,14 @@
     <ClCompile Include="1030_프렉탈평면.cpp">
       <Filter>소스 파일\BaekJoon\NonSolve</Filter>
     </ClCompile>
-    <ClCompile Include="1058_친구.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="1063_킹.cpp">
       <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="1058_친구.cpp">
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="1033_칵테일.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

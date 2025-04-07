@@ -10,7 +10,6 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include <limits>
 
 int main()
 {
@@ -26,7 +25,8 @@ int main()
 		for (int j = 0; j < N; j++)
 		{
 			std::cin >> Friend[i][j];
-			if (Friend[i][j] == 'Y')
+			if(i==j) Visited[i][j] = true;
+			else if (Friend[i][j] == 'Y')
 			{
 				Friend_2.insert({j, i});
 				Visited[i][j] = true;
@@ -38,21 +38,44 @@ int main()
 	std::multimap<int, int> Temp = Friend_2;
 	for (const auto& m : Temp)
 	{
+		//const auto& Range = Temp.equal_range(m.first);
+		//for (std::multimap<int, int>::iterator pS = Range.first, pF = (pS++); pS != Range.second; pF++, pS++)
+		//{
+		//	if (!Visited[pF->second][pS->second])
+		//	{
+		//		Friend_2.insert({ pF->second, pS->second });
+		//		Friend_2.insert({ pS->second, pF->second });
+		//		Visited[pF->second][pS->second] = true;
+		//		Visited[pS->second][pF->second] = true;
+		//	}
+		//}
+
 		const auto& Range = Temp.equal_range(m.first);
-		for (auto pF = Range.first, pS = (++pF); pS != Range.second; pF++, pS++)
+		std::vector<int> NodeIndex;
+		for (std::multimap<int, int>::iterator pF = Range.first; pF != Range.second; pF++)
 		{
-			if (!Visited[pF->second][pS->second])
+			NodeIndex.emplace_back(pF->second);
+		}
+
+		for (int i = 0; i < NodeIndex.size(); i++)
+		{
+			for (int j = i + 1; j < NodeIndex.size(); j++)
 			{
-				Friend_2.insert({ pF->second, pS->second });
-				Friend_2.insert({ pS->second, pF->second });
-				Visited[pF->second][pS->second] = true;
-				Visited[pS->second][pF->second] = true;
+				int f = NodeIndex[i];
+				int s = NodeIndex[j];
+				if (!Visited[f][s])
+				{
+					Friend_2.insert({ f, s });
+					Friend_2.insert({ s, f });
+					Visited[f][s] = true;
+					Visited[s][f] = true;
+				}
 			}
 		}
 	}
 
 
-	int Max{ std::numeric_limits<int>::min() };
+	int Max{ 0 };
 	for (const auto& m : Friend_2)
 	{
 		const auto& Range = Friend_2.equal_range(m.first);

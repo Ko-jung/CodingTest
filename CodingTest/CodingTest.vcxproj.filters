@@ -228,5 +228,26 @@
     <ClCompile Include="1033_칵테일.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2798_블랙잭.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="7568_덩치.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="2304_창고다각형.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="14719_빗물.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="15989_1,2,3더하기4.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="17484_진우의달여행.cpp">
+      <Filter>소스 파일\BaekJoon\DP</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -249,5 +249,17 @@
     <ClCompile Include="17484_진우의달여행.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
+    <ClCompile Include="Programmers_블록이동하기.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
+    <ClCompile Include="TUkorea0052_위성이미지.cpp">
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="1697_숨바꼭질.cpp">
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="14940_쉬운최단거리.cpp">
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

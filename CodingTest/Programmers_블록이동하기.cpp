@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <set>
+#include <unordered_set>
 #include <array>
 
 using namespace std;
@@ -59,8 +59,8 @@ struct Node
     {
         if( FirstPos.first < 0 || FirstPos.first >= M ||
             FirstPos.second < 0 || FirstPos.second >= M ||
-            SecondPos.first < 0 || SecondPos.first >= N ||
-            SecondPos.second < 0 || SecondPos.second >= N ||
+            SecondPos.first < 0 || SecondPos.first >= M ||
+            SecondPos.second < 0 || SecondPos.second >= M ||
             board[FirstPos.second][FirstPos.first] == 1 ||
             board[SecondPos.second][SecondPos.first] == 1)
             return true;
@@ -73,14 +73,27 @@ struct Node
         cout << std::boolalpha;
         cout << ", Is:" << IsVertial << endl;;
     }
-    bool operator==(const Node& A)
+    bool operator==(const Node& A) const
     {
-        if (FirstPos != A.FirstPos) return FirstPos < A.FirstPos;
-        return SecondPos < A.SecondPos;
+        return (FirstPos == A.FirstPos) && (SecondPos == A.SecondPos) && (IsVertial == A.IsVertial);
     }
     bool operator<(const Node& A) const
     {
         return (FirstPos.first < A.FirstPos.first);
+    }
+};
+
+template <>
+struct hash<Node> {
+    size_t operator()(const Node& n) const noexcept {
+        size_t h1 = hash<int>()(n.FirstPos.first);
+        size_t h2 = hash<int>()(n.FirstPos.second);
+        size_t h3 = hash<int>()(n.SecondPos.first);
+        size_t h4 = hash<int>()(n.SecondPos.second);
+        size_t h5 = hash<int>()(n.IsVertial);
+
+        // 간단한 combine 방법 (Xor + shift)
+        return ((h1 ^ (h2 << 1)) >> 1) ^ (h3 << 1) ^ (h4 << 2) ^ (h5 << 3);
     }
 };
 
@@ -90,7 +103,7 @@ int solution(vector<vector<int>> board) {
     int M = board[0].size();
     int N = board.size();
 
-    set<Node> Visited;
+    unordered_set<Node> Visited;
 
     queue<Node> BFS;
     BFS.push({ 0,0,1,0,0,false });
@@ -98,7 +111,7 @@ int solution(vector<vector<int>> board) {
     {
         Node NowPos = BFS.front();
         BFS.pop();
-        NowPos.Print();
+        //NowPos.Print();
 
         int x1 = NowPos.FirstPos.first;
         int y1 = NowPos.FirstPos.second;
@@ -112,9 +125,9 @@ int solution(vector<vector<int>> board) {
         {
             continue;
         }
-        if ((x1 == M && y1 == M) || (x2 == M && y2 == M))
+        if ((x1 == M - 1 && y1 == M - 1) || (x2 == M - 1 && y2 == M - 1))
         {
-            answer = Time;
+            answer = min(answer, Time);
             break;
         }
 

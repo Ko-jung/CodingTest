@@ -249,9 +249,6 @@
     <ClCompile Include="17484_진우의달여행.cpp">
       <Filter>소스 파일\BaekJoon\DP</Filter>
     </ClCompile>
-    <ClCompile Include="Programmers_블록이동하기.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
-    </ClCompile>
     <ClCompile Include="TUkorea0052_위성이미지.cpp">
       <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
     </ClCompile>
@@ -260,6 +257,24 @@
     </ClCompile>
     <ClCompile Include="14940_쉬운최단거리.cpp">
       <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_블록이동하기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_디스크컨트롤러.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
+    <ClCompile Include="1446_지름길.cpp">
+      <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
+    </ClCompile>
+    <ClCompile Include="13549_숨바꼭질3.cpp">
+      <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
+    </ClCompile>
+    <ClCompile Include="TUKorea_장애물.cpp">
+      <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_합승택시요금.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

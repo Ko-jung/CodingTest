@@ -20,28 +20,38 @@ void Print(const vector<vector<int>>& Board)
 	cout << endl;
 }
 
-void FloydWarshall(int s, const vector<vector<int>>& fares, vector<vector<int>>& board)
+void Dijkstar(int n, int Start, vector<vector<int>>& Dijk, const vector<vector<int>>& fares)
 {
-	for (int i = 0; i < s; i++)
+	for (int i = 0; i < n; i++)
 	{
-		board[i][i] = 0;
+		Dijk[i][i] = 0;
 	}
-	for (auto& fare : fares)
+	for (const auto& fare : fares)
 	{
-		board[fare[0] - 1][fare[1] - 1] = fare[2];
-		board[fare[1] - 1][fare[0] - 1] = fare[2];
+		Dijk[fare[0] - 1][fare[1] - 1] = fare[2];
+		Dijk[fare[1] - 1][fare[0] - 1] = fare[2];
 	}
 
-	for (int k = 0; k < s; k++)
+	priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<>> BFS;
+	BFS.emplace(0, Start, Start);
+	while (!BFS.empty())
 	{
-		for (int i = 0; i < s; i++)
+		auto [Weight, Prev, Now] = BFS.top();
+		BFS.pop();
+
+		cout << Prev << ", " << Now << ", " << Weight << endl;
+
+		Dijk[Start][Now] = min(Dijk[Start][Now], Weight);
+
+		for (int i = 0; i < n; i++)
 		{
-			for (int j = 0; j < s; j++)
-			{
-				board[i][j] = min(board[i][j], board[i][k] + board[k][j]);
-			}
+			if (Dijk[Now][i] == MAX || Now == i) continue;
+			if (Dijk[Start][i] < Weight + Dijk[Now][i]) continue;
+
+			BFS.emplace(Weight + Dijk[Now][i], Now, i);
 		}
 	}
+	Print(Dijk);
 }
 
 int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
@@ -63,46 +73,17 @@ int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
 	}
 	Print(Board);
 
-	// i, j 노드의 최단 거리 구하기
-	vector<vector<int>> Warshall(n, vector<int>(n, MAX));
-	FloydWarshall(n, fares, Warshall);
-	Print(Warshall);
+	// 3번의 다익스트라
+	vector<vector<vector<int>>> Dijk(3, vector<vector<int>>(n, vector<int>(n, MAX)));
+	Dijkstar(n, s - 1, Dijk[0], fares);
+	Dijkstar(n, a - 1, Dijk[1], fares);
+	Dijkstar(n, b - 1, Dijk[2], fares);
 
-	// 4번에서 출발해서 도착하는 노드 중에 따로갈떄의 최솟값 찾기
 	for (int i = 0; i < n; i++)
 	{
-		if (Warshall[s - 1][i] == MAX || Warshall[i][a - 1] == MAX || Warshall[i][b - 1] == MAX)
-			continue;
-		answer = min(answer, Warshall[s - 1][i] + Warshall[i][a - 1] + Warshall[i][b - 1]);
+		if (Dijk[0][s - 1][i] == MAX || Dijk[1][a - 1][i] == MAX || Dijk[2][b - 1][i] == MAX) continue;
+		answer = min(answer, Dijk[0][s-1][i] + Dijk[1][a - 1][i] + Dijk[2][b - 1][i]);
 	}
-
-	// // 시작 지점에서 모든 노드의 비용을 알아내고 (같이 택시)
-	// priority_queue<tuple<int, int, int>> Dijk;
-	// vector<bool> Visited(s, false);
-	// vector<int> DistFromStart(s, MAX);
-	// Dijk.emplace(s - 1, s - 1, 0);
-	// while (!Dijk.empty())
-	// {
-	// 	auto [PrevNode, NowNode, Weight] = Dijk.top();
-	// 	Dijk.pop();
-	// 
-	// 	Visited[NowNode] = true;
-	// 	DistFromStart[NowNode] = min(DistFromStart[NowNode], Weight);
-	// 
-	// 	for (int i = 0; i < s; i++)
-	// 	{
-	// 		if (NowNode == i || Board[NowNode][i] == MAX || Visited[i]) continue;
-	// 		Dijk.emplace(NowNode, i, Weight + Board[NowNode][i]);
-	// 	}
-	// }
-	// for (const auto& aaa : DistFromStart)
-	// 	cout << aaa << ", ";
-	// cout << endl;
-	// Print(Board);
-
-	// 시작 지점에서 가격이 낮은 순으로 각자 비용을 계산한다
-
-
 
 	return answer;
 }

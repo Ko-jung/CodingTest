@@ -277,7 +277,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="3273_두수의합.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\BaekJoon\Other</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -58,6 +58,9 @@
     <Filter Include="소스 파일\BaekJoon\DataStructure">
       <UniqueIdentifier>{80fd60d0-794d-4f65-9862-9683d02b2c5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\TwoPointer">
+      <UniqueIdentifier>{ee01fed8-3cfe-40b8-b916-0f77c1ff5db0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -273,13 +276,16 @@
     <ClCompile Include="TUKorea_장애물.cpp">
       <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
     </ClCompile>
-    <ClCompile Include="3273_두수의합.cpp">
-      <Filter>소스 파일\BaekJoon\Other</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers_합승택시요금.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
     <ClCompile Include="2531_회전초밥.cpp">
+      <Filter>소스 파일\BaekJoon\TwoPointer</Filter>
+    </ClCompile>
+    <ClCompile Include="3273_두수의합.cpp">
+      <Filter>소스 파일\BaekJoon\TwoPointer</Filter>
+    </ClCompile>
+    <ClCompile Include="20922_겹치는건싫어.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

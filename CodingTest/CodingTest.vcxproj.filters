@@ -61,6 +61,9 @@
     <Filter Include="소스 파일\BaekJoon\TwoPointer">
       <UniqueIdentifier>{ee01fed8-3cfe-40b8-b916-0f77c1ff5db0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Nexon">
+      <UniqueIdentifier>{ff125bd1-3d71-41aa-8050-9913508c6f4d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -286,7 +289,31 @@
       <Filter>소스 파일\BaekJoon\TwoPointer</Filter>
     </ClCompile>
     <ClCompile Include="20922_겹치는건싫어.cpp">
+      <Filter>소스 파일\BaekJoon\TwoPointer</Filter>
+    </ClCompile>
+    <ClCompile Include="21921_블로그.cpp">
+      <Filter>소스 파일\BaekJoon\TwoPointer</Filter>
+    </ClCompile>
+    <ClCompile Include="TUKorea_목재총량.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2023_3_선긋기귀찮아.cpp">
+      <Filter>소스 파일\Nexon</Filter>
+    </ClCompile>
+    <ClCompile Include="2023_4_발전소신입사원지혜도와주기.cpp">
+      <Filter>소스 파일\Nexon</Filter>
+    </ClCompile>
+    <ClCompile Include="2023_5_삼형제의숫자놀이.cpp">
+      <Filter>소스 파일\Nexon</Filter>
+    </ClCompile>
+    <ClCompile Include="2023_6_신기한채점방식의장기자랑.cpp">
+      <Filter>소스 파일\Nexon</Filter>
+    </ClCompile>
+    <ClCompile Include="2023_2_미니카트라이더.cpp">
+      <Filter>소스 파일\Nexon</Filter>
+    </ClCompile>
+    <ClCompile Include="2023_1_천공카드입력장치의자동완성.cpp">
+      <Filter>소스 파일\Nexon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

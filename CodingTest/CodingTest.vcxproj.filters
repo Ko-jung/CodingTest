@@ -64,6 +64,9 @@
     <Filter Include="소스 파일\Nexon">
       <UniqueIdentifier>{ff125bd1-3d71-41aa-8050-9913508c6f4d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Nexon\2025_문제">
+      <UniqueIdentifier>{30b31be7-e4f3-459b-a956-d6319272a7fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -346,7 +349,10 @@
       <Filter>소스 파일\BaekJoon\Other</Filter>
     </ClCompile>
     <ClCompile Include="2261_가장가까운두점.cpp">
-      <Filter>소스 파일\BaekJoon</Filter>
+      <Filter>소스 파일\Nexon\2025_문제</Filter>
+    </ClCompile>
+    <ClCompile Include="2578_빙고.cpp">
+      <Filter>소스 파일\Nexon\2025_문제</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

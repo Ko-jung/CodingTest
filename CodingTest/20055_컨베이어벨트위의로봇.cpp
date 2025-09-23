@@ -55,7 +55,7 @@ int main()
 
 	int LowK = 0;
 	int RotateCount = 0;
-	Print(Conveyors, N, RotateCount);
+	//Print(Conveyors, N, RotateCount);
 
 	while (true)
 	{

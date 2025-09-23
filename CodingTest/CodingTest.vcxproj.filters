@@ -318,5 +318,35 @@
     <ClCompile Include="14217_그래프탐색.cpp">
       <Filter>소스 파일\BaekJoon</Filter>
     </ClCompile>
+    <ClCompile Include="14502_연구소.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="13460_구슬탈출2.cpp">
+      <Filter>소스 파일\BaekJoon\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="20055_컨베이어벨트위의로봇.cpp">
+      <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="1107_리모컨.cpp">
+      <Filter>소스 파일\BaekJoon\BruteForce</Filter>
+    </ClCompile>
+    <ClCompile Include="1916_최소비용구하기.cpp">
+      <Filter>소스 파일\BaekJoon\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="5430_AC.cpp">
+      <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="7569_토마토.cpp">
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="2178_미로탐색.cpp">
+      <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="3190_뱀.cpp">
+      <Filter>소스 파일\BaekJoon\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="2261_가장가까운두점.cpp">
+      <Filter>소스 파일\BaekJoon</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -83,3 +83,70 @@ int solution(int n, vector<vector<int>> costs) {
 
     return answer;
 }
+
+// Kruskal 알고리즘 (Union-Find) 내일 다시 ㄱㄱ
+
+//#include <string>
+//#include <vector>
+//#include <queue>
+//#include <map>
+//#include <iostream>
+//#include <numeric>
+//
+//using namespace std;
+//
+//// Union Find용 Parent
+//vector<int> Parent;
+//
+//int Find(int i)
+//{
+//    //if(Parent[i] == i)
+//    //    return i;
+//    //return Find(Parent[i]);
+//    if (Parent[i] != i)
+//        Parent[i] = Find(Parent[i]);
+//    return Parent[i];
+//}
+//
+//void Union(int Start, int To)
+//{
+//    //int StartRoot = Find(Start);
+//    //int ToRoot = Find(To);
+//    //if(StartRoot != ToRoot)
+//    //    Parent[ToRoot] = StartRoot;
+//    Parent[To] = Find(Start);
+//}
+//
+//int solution(int n, vector<vector<int>> costs) {
+//    int answer = 0;
+//
+//    priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<>> BFS;
+//    for (const auto& cost : costs)
+//    {
+//        BFS.emplace(cost[2], cost[0], cost[1]);
+//    }
+//
+//    // Union Find용 Parent Init
+//    Parent.assign(n, 0);
+//    iota(Parent.begin(), Parent.end(), 0);
+//
+//    while (!BFS.empty())
+//    {
+//        auto [Weight, Start, To] = BFS.top();
+//        BFS.pop();
+//
+//        // Start와 To의 부모가 같은지 확인 같다면 안함
+//        if (Find(Start) == Find(To)) continue;
+//
+//        cout << Start << ", " << To << ", " << Weight << endl;
+//        for (auto temp : Parent)
+//            cout << temp << ", ";
+//        cout << endl;
+//
+//        // 다르다면 Union으로 결합 후 비용 추가
+//        Union(Start, To);
+//        answer += Weight;
+//    }
+//
+//    return answer;
+//}

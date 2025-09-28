@@ -67,6 +67,9 @@
     <Filter Include="소스 파일\Nexon\2025_문제">
       <UniqueIdentifier>{30b31be7-e4f3-459b-a956-d6319272a7fc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BaekJoon\DivideandConquer">
+      <UniqueIdentifier>{cc1117c1-7687-41d9-952c-8684be45ff92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -353,6 +356,15 @@
     </ClCompile>
     <ClCompile Include="2578_빙고.cpp">
       <Filter>소스 파일\Nexon\2025_문제</Filter>
+    </ClCompile>
+    <ClCompile Include="1922_네트워크연결.cpp">
+      <Filter>소스 파일\Nexon\2025_문제</Filter>
+    </ClCompile>
+    <ClCompile Include="1992_쿼드트리.cpp">
+      <Filter>소스 파일\BaekJoon\DivideandConquer</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_섬연결하기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

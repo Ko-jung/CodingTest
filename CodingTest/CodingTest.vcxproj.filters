@@ -369,5 +369,8 @@
     <ClCompile Include="Programmers_비밀코드해독.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
+    <ClCompile Include="Programmers_충돌위험찾기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

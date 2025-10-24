@@ -70,6 +70,9 @@
     <Filter Include="소스 파일\BaekJoon\DivideandConquer">
       <UniqueIdentifier>{cc1117c1-7687-41d9-952c-8684be45ff92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Programmers\Solved">
+      <UniqueIdentifier>{ec018c2d-c59f-425b-b237-a149a646885e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrogInMaze.cpp">
@@ -183,9 +186,6 @@
     <ClCompile Include="1012_유기농배추.cpp">
       <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
     </ClCompile>
-    <ClCompile Include="퍼즐게임챌린지.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="충돌위험찾기.cpp">
       <Filter>소스 파일\Programmers\NonSolve</Filter>
     </ClCompile>
@@ -194,9 +194,6 @@
     </ClCompile>
     <ClCompile Include="도넛과막대그래프.cpp">
       <Filter>소스 파일\Programmers\NonSolve</Filter>
-    </ClCompile>
-    <ClCompile Include="석유시추.cpp">
-      <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
     <ClCompile Include="1092_배.cpp">
       <Filter>소스 파일\BaekJoon\BruteForce</Filter>
@@ -270,12 +267,6 @@
     <ClCompile Include="14940_쉬운최단거리.cpp">
       <Filter>소스 파일\BaekJoon\DFS/BFS</Filter>
     </ClCompile>
-    <ClCompile Include="Programmers_블록이동하기.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
-    <ClCompile Include="Programmers_디스크컨트롤러.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="1446_지름길.cpp">
       <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
     </ClCompile>
@@ -284,9 +275,6 @@
     </ClCompile>
     <ClCompile Include="TUKorea_장애물.cpp">
       <Filter>소스 파일\BaekJoon\Dijkstra</Filter>
-    </ClCompile>
-    <ClCompile Include="Programmers_합승택시요금.cpp">
-      <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
     <ClCompile Include="2531_회전초밥.cpp">
       <Filter>소스 파일\BaekJoon\TwoPointer</Filter>
@@ -363,26 +351,44 @@
     <ClCompile Include="1992_쿼드트리.cpp">
       <Filter>소스 파일\BaekJoon\DivideandConquer</Filter>
     </ClCompile>
-    <ClCompile Include="Programmers_섬연결하기.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
-    <ClCompile Include="Programmers_비밀코드해독.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
-    <ClCompile Include="Programmers_충돌위험찾기.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
-    <ClCompile Include="Programmers_수식복원.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers_스킬체크테스트2-2.cpp">
       <Filter>소스 파일\Programmers\NonSolve</Filter>
     </ClCompile>
     <ClCompile Include="Programmers_스킬체크테스트2-1.cpp">
       <Filter>소스 파일\Programmers\NonSolve</Filter>
     </ClCompile>
+    <ClCompile Include="Programmers_디스크컨트롤러.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_블록이동하기.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_비밀코드해독.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_섬연결하기.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
     <ClCompile Include="Programmers_수레움직이기.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_수식복원.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_충돌위험찾기.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_합승택시요금.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="퍼즐게임챌린지.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="석유시추.cpp">
       <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_에어컨.cpp">
+      <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

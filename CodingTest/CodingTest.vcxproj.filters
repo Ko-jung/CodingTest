@@ -375,5 +375,14 @@
     <ClCompile Include="Programmers_수식복원.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
+    <ClCompile Include="Programmers_스킬체크테스트2-2.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_스킬체크테스트2-1.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_수레움직이기.cpp">
+      <Filter>소스 파일\Programmers\NonSolve</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

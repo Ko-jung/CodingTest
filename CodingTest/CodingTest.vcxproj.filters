@@ -388,6 +388,9 @@
       <Filter>소스 파일\Programmers\NonSolve</Filter>
     </ClCompile>
     <ClCompile Include="Programmers_에어컨.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_상담원인원.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
   </ItemGroup>

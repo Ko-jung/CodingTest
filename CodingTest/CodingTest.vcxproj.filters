@@ -393,5 +393,8 @@
     <ClCompile Include="Programmers_상담원인원.cpp">
       <Filter>소스 파일\Programmers</Filter>
     </ClCompile>
+    <ClCompile Include="Programmers_과제진행하기.cpp">
+      <Filter>소스 파일\Programmers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

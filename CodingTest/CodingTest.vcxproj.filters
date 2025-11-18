@@ -390,11 +390,20 @@
     <ClCompile Include="Programmers_에어컨.cpp">
       <Filter>소스 파일\Programmers\Solved</Filter>
     </ClCompile>
-    <ClCompile Include="Programmers_상담원인원.cpp">
-      <Filter>소스 파일\Programmers</Filter>
-    </ClCompile>
     <ClCompile Include="Programmers_과제진행하기.cpp">
-      <Filter>소스 파일\Programmers</Filter>
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_상담원인원.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_호텔대실.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_억억단을외우자.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
+    </ClCompile>
+    <ClCompile Include="Programmers_디펜스게임.cpp">
+      <Filter>소스 파일\Programmers\Solved</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
